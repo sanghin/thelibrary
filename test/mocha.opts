@@ -1,0 +1,4 @@
+app/**/*.spec.js
+--require test/helpers/expect
+--reporter spec
+--ui bdd
