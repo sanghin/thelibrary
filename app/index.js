@@ -11,6 +11,5 @@ marauderScraper((err,obj) => {
         p.postedBy = p.postedBy.replace(/<img[^>]*>/g,"");
         return p;
     });
-    console.log(posts);
-    fs.writeFile('./results.json', JSON.stringify(posts, null, 2), (e) => console.log(e)); 
+    fs.writeFile('./results.json', JSON.stringify(posts, null, 2), (e) => console.log(e || 'Writing to results.json')); 
 });
