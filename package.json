@@ -1,0 +1,17 @@
+{
+  "name": "poe-scraper",
+  "version": "1.0.0",
+  "description": "Scrapes PoE class forums for builds to store into PostgreSQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "scraper",
+    "poe",
+    "node",
+    "postgresql"
+  ],
+  "author": "Anthony Lubic",
+  "license": "MIT"
+}
