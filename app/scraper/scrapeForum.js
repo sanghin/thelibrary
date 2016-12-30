@@ -1,20 +1,8 @@
 const xray = require('x-ray')();
-const urls = require('../utils/urls.js');
-const postSchema = require('./postschema.js');
+const urls = require('../utils/urls');
+const postSchema = require('./postschema');
+const { shapeForumResults } = require('../utils/postutils');
 
-const cleanPost = (post) => {
-    return Object.assign({}, post, {
-        title: post.title.replace(/\r?\n|\r/g, '').trim(),
-        postedBy: post.postedBy.replace(/<img[^>]*>/g, '')
-    });
-};
-
-const shapeForumResults = (forumTitle, posts) => {
-    return {
-        forumTitle,
-        posts: [ ...posts.map(cleanPost) ]
-    };
-};
 
 const scrapeForum = (forumId, forumTitle) => {
 
@@ -31,9 +19,8 @@ const scrapeForum = (forumId, forumTitle) => {
             }
         });
     });
-}
+};
 
 module.exports = {
-    scrapeForum,
-    cleanPost
+    scrapeForum
 };

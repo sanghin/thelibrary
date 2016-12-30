@@ -1,12 +1,5 @@
 const schema = require('./postschema.js');
 
-// const postArraySchema = [{
-//     title: '.title a@html',
-//     url: '.title a@href',
-//     threadId: '.setReadButton@data-id',
-//     postedBy: '.profile-link a@html'
-// }];
-
 describe('postSchema', () => {
     
     it('should select the correct title element', () => {
