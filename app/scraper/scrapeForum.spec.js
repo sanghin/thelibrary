@@ -1,29 +1,48 @@
 const proxyquire = require('proxyquire');
-"use strict";
 
 describe('scrapeForum()', () => {
     let scrapeForum;
-    let xrayMock = () => () => {};
-    let xrayFactoryMock = () => xrayMock;
-    let xraySpy;
+    let xrayMock, xQueryMock;
+
+    let xQueryStub, xrayStub;
 
     beforeEach(() => {
-        xraySpy = sinon.spy(xrayMock);
-        scrapeForum = proxyquire('./scrapeForum.js', {
-            'x-ray': xrayFactoryMock,
-        }).scrapeForum;
+        xQueryMock = (cb) => cb(null, [{title: 'Test', postedBy: 'some guy'}]);
+        xrayMock = () => xQueryMock;
+
+        xrayStub = sinon.spy(xrayMock);
+        xQueryStub = sinon.spy(xQueryMock);
+
+        scrapeForum = proxyquire('./scrapeForum', {'x-ray': () => xraySpy}).scrapeForum;
+    });
+
+    it('should pass a sanity check', () => {
+        //TODO: fix.  no clue how to use spies with sinon, apparently.
+        let myFunc = () => {};
+        let mySpy = sinon.spy(myFunc);
+        console.log(mySpy);
+        expect(mySpy).to.have.callCount(0);
+        myFunc();
+        expect(mySpy).to.have.callCount(1);
     });
 
     it('should return a promise', () => {
         const scrapePromise = scrapeForum('marauder', 'marauder');
         expect(scrapePromise.then).to.be.a('function');
     });
+
     it('should call x-ray with the proper scope', () => {
         const urls = require('../utils/urls');
-        const postSchema = require('../scraper/postschema');
-        let forumId = 'marauder';
-        scrapeForum(forumId, 'marauder');
-        expect(xraySpy).to.have.been.calledWith(`${urls.base}${urls.forum}${forumId}`, 'td.thread', postSchema);
+        const {postSchema,bodySchema} = require('../scraper/postschema');
+        let forumId = '40';
+        let forumTitle = 'duelist';
+        let testUrl = `${urls.base}${urls.forum}${forumId}`;
+        let testScope = 'td.thread';
+
+        scrapeForum(forumId, forumTitle);
+        expect(xraySpy).to.have.callCount(1);
+        expect(xraySpy).to.have.been.calledWith(testUrl, testScope, postSchema);
     });
+
     it('should resolve and call shapeForumResults');
 });
