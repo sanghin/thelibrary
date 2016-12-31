@@ -2,28 +2,30 @@ const proxyquire = require('proxyquire');
 
 describe('scrapeForum()', () => {
     let scrapeForum;
-    let xrayMock, xQueryMock;
-
-    let xQueryStub, xrayStub;
+    let mocks = {};
+    let xQuerySpy, xraySpy;
 
     beforeEach(() => {
-        xQueryMock = (cb) => cb(null, [{title: 'Test', postedBy: 'some guy'}]);
-        xrayMock = () => xQueryMock;
+        mocks = {
+            xray: () => mocks.query,
+            query: (cb) => cb(null, [{title: 'Test', postedBy: 'some guy'}])
+        };
 
-        xrayStub = sinon.spy(xrayMock);
-        xQueryStub = sinon.spy(xQueryMock);
+        xraySpy = sinon.spy(mocks, 'xray');
+        xQuerySpy = sinon.spy(mocks, 'query');
 
-        scrapeForum = proxyquire('./scrapeForum', {'x-ray': () => xraySpy}).scrapeForum;
+        scrapeForum = proxyquire('./scrapeForum', {'x-ray': () => mocks.xray}).scrapeForum;
     });
 
     it('should pass a sanity check', () => {
-        //TODO: fix.  no clue how to use spies with sinon, apparently.
-        let myFunc = () => {};
-        let mySpy = sinon.spy(myFunc);
-        console.log(mySpy);
+        let spies = {
+            myFunc: () => {}
+        };
+        let mySpy = sinon.spy(spies, 'myFunc');
         expect(mySpy).to.have.callCount(0);
-        myFunc();
+        spies.myFunc();
         expect(mySpy).to.have.callCount(1);
+
     });
 
     it('should return a promise', () => {

@@ -16,13 +16,13 @@ let pool = new pg.Pool(config);
 const writePostsToDb = ({forumTitle, posts}) => {
     if (!Array.isArray(posts) || !forumTitle) throw new TypeError('Expected posts to be Array and forumTitle to be defined');
 
-    let threadIds = posts.map(p => p.threadId);
+    const threadIds = posts.map(p => p.threadId);
     pool.connect((err, client, done) => {
         if (err) return console.error('error fetching client from pool', err);
 
         let postsToUpdate = [];
         let postsToInsert = [];
-        let sqlQuery = `
+        const sqlQuery = `
             SELECT 
             thread_id AS threadId, 
             title, 
@@ -32,13 +32,14 @@ const writePostsToDb = ({forumTitle, posts}) => {
             body, 
             created_date AS createDate, 
             updated_date AS updateDate 
-            FROM poe.Post WHERE thread_id IN ($1:csv)
+            FROM poe."Post" WHERE thread_id = ANY ($1)
         `;
-        client.query(sqlQuery, threadIds, (err, result) => {
+        client.query(sqlQuery, [threadIds], (err, result) => {
             done();
             if (err) return console.error('error running query', err);
-            postsToUpdate = posts.filter(ep => result.rows.find(p => p.threadId === ep.threadId && ep.updateDate < p.updateDate));
-            postsToCreate = posts.filter(p => result.rows.every(ep => ep.threadId !== p.threadId));
+            console.log(result.rows[0]);
+            postsToUpdate = posts.filter(ep => result.rows.filter(p => p.threadId === ep.threadId && ep.updateDate < p.updateDate).length > 0);
+            postsToInsert = posts.filter(p => result.rows.filter(ep => ep.threadId === p.threadId).length <= 0);
             updatePosts(postsToUpdate, forumTitle);
             insertPosts(postsToInsert, forumTitle);
         });
@@ -50,11 +51,12 @@ const writePostsToDb = ({forumTitle, posts}) => {
 };
 
 const updatePosts = (posts, forumTitle) => {
-    if (!Array.isArray(posts) || posts.length <= 0) throw new Error('Expected posts to be Array with contents.');
+    console.log('update ', posts.length);
+    if (!Array.isArray(posts) || posts.length <= 0) return;
     pool.connect((err, client, done) => {
         if (err) return console.error('error fetching client from pool', err);
-        let sqlQuery = `
-            UPDATE poe.Post SET
+        const sqlQuery = `
+            UPDATE poe."Post" SET
             creator = $1, 
             title = $2,
             url = $3,
@@ -68,27 +70,47 @@ const updatePosts = (posts, forumTitle) => {
             p.title,
             p.url,
             p.body,
-            p.updateDate,
+            p.updateDate || new Date(),
             forumTitle
         ], (err, result) => {
             done();
             if (err) return console.error('error running query', err);
-            console.info(result);
         }));
-    });
-
-    pool.on('error', (err, client) => {
-        console.error(`idle client error: ${err.message}`, client, err.stack)
     });
 };
 
 const insertPosts = (posts, forumTitle) => {
+    console.log('insert ', posts.length);
+    if (!Array.isArray(posts) || posts.length <= 0) return;
+    pool.connect((err, client, done) => {
+        if (err) return console.error('error fetching client from pool', err);
+        const sqlQuery = `
+            INSERT INTO poe."Post" 
+            (creator, title, url, body, updated_date, created_date, forum_title, thread_id) VALUES
+            ($1, $2, $3, $4, $5, $6, $7, $8)
+        `;
+        posts.map(p => client.query(sqlQuery, [
+            p.postedBy,
+            p.title,
+            p.url,
+            p.body,
+            p.updateDate || new Date(),
+            p.createDate,
+            forumTitle,
+            p.threadId
+        ], (err, result) => {
+            done();
+            if (err) return console.error('error running query', err);
+        }));
 
+    });
 };
 
 const writePostCollectionToDb = (postCollection) => {
-    if (!Array.isArray(postCollection)) throw new TypeError(`Expected postCollection to be Array, received ${typeof posts}`);
-    postCollection.map(writePostsToDb);
+    if (!Array.isArray(postCollection)) {
+        throw new TypeError(`Expected postCollection to be Array, received ${typeof posts}`);
+    }
+    postCollection.map(p => writePostsToDb(p));
 };
 
 
@@ -96,8 +118,10 @@ let postPromises = scrapers.map(s => s.scrapePromise(s.id, s.name));
 
 Promise
     .all(postPromises)
-    //.then(writePostCollectionToDb)
-    .then(posts => fs.writeFile('./results.json', JSON.stringify(posts, null, 2)))
+    .then(posts => {
+        writePostCollectionToDb(posts);
+        fs.writeFile('./results.json', JSON.stringify(posts, null, 2));
+    })
     .catch(err => {
         console.error('ERROR!');
         console.error(err);

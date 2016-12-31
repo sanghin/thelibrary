@@ -1,6 +1,6 @@
 const xray = require('x-ray')();
 const urls = require('../utils/urls');
-const {postSchema,bodySchema} = require('./postschema');
+const { postSchema, bodySchema } = require('./postschema');
 const { shapeForumResults } = require('../utils/postutils');
 
 
