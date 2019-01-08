@@ -2,16 +2,7 @@ const fs = require('fs');
 const {scrapers} = require('./scraper/scrapers.js');
 const pg = require('pg');
 
-let config = {
-    user: 'poe_scraper',
-    database: 'postgres',
-    password: '!!1234poe',
-    host: 'localhost',
-    port: 5531,
-    max: 10,
-    idleTimeoutMillis: 30000
-};
-let pool = new pg.Pool(config);
+let pool = new pg.Pool({connectionString: proces.env.PG_CONNECTION_STRING});
 
 const writePostsToDb = ({forumTitle, posts}) => {
     if (!Array.isArray(posts) || !forumTitle) throw new TypeError('Expected posts to be Array and forumTitle to be defined');
