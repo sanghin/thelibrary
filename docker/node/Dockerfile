@@ -16,6 +16,4 @@ COPY --chown=node:node . .
 
 USER node
 
-# If our server uses 1337 by default
-# expose it from Docker container
 EXPOSE 9000
