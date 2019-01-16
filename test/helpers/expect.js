@@ -1,6 +1,6 @@
-let chai = require('chai');
-let sinonChai = require('sinon-chai');
+let chai = require('chai')
+let sinonChai = require('sinon-chai')
 
-global.expect = chai.expect;
-global.sinon = require('sinon');
-chai.use(sinonChai);
+global.expect = chai.expect
+global.sinon = require('sinon')
+chai.use(sinonChai)
