@@ -1,0 +1,19 @@
+const { postSchema } = require("./postschema.js");
+
+describe("postSchema", () => {
+  it("should select the correct title element", () => {
+    expect(postSchema[0].title).toEqual(".title a@html");
+  });
+
+  it("should select the correct url element", () => {
+    expect(postSchema[0].url).toEqual(".title a@href");
+  });
+
+  it("should select the correct threadId element", () => {
+    expect(postSchema[0].threadId).toEqual(".setReadButton@data-id");
+  });
+
+  it("should select the correct postedBy element", () => {
+    expect(postSchema[0].postedBy).toEqual(".profile-link a@html");
+  });
+});

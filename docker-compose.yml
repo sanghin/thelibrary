@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  node:
+    container_name: poe_build_scraper_node
+    build:
+      context: ./
+      dockerfile: ./docker/node/Dockerfile
+    ports:
+      - 9000:9000
+    links:
+      - postgres
+    environment:
+      - PG_CONNECTION_STRING
+
+  postgres:
+    container_name: poe_build_scraper_postgres
+    build: ./docker/postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ../.volumes/postgres:/var/lib/postgresql/data
