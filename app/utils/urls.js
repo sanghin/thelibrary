@@ -9,8 +9,8 @@ let urls = {
     scion: '436',
     shadow: '303',
     templar: '41',
-    witch: '22'
-  }
-}
+    witch: '22',
+  },
+};
 
-module.exports = urls
+module.exports = urls;
