@@ -1,6 +1,6 @@
 {
   "name": "poe-build-scraper",
-  "version": "1.13.0",
+  "version": "v1.13.0",
   "description": "Scrapes PoE class forums for builds to store into PostgreSQL",
   "main": "app/index.js",
   "scripts": {
