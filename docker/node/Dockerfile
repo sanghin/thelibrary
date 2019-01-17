@@ -10,18 +10,22 @@ RUN rm -f /usr/local/bin/yarn && \
 
 # Create a non root user
 RUN mkdir -p /home/nodejs/poe-build-scraper/node_modules && chown -R node:node /home/nodejs/poe-build-scraper
+
 WORKDIR /home/nodejs/poe-build-scraper
 
+# If we change package.json, this layer will be rebuilt, 
+# If not this instruction will allow Docker to use the existing image layer and skip reinstalling our node modules.
 COPY package*.json ./
 # cache clean ->https://github.com/yarnpkg/yarn/issues/749#issuecomment-373752990
 RUN yarn install --frozen-lockfile --production && yarn cache clean
 
-RUN npm install
-
+# copy application code 
 COPY . .
 
+# ensure that the application files are owned by the non-root node user
 COPY --chown=node:node . .
 
+# don't use a root user inside the container
 USER node
 
 EXPOSE 9000
