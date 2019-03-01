@@ -1,3 +1,5 @@
+'use strict';
+
 const cleanPost = post => {
   return Object.assign({}, post, {
     title: post.title.replace(/\r?\n|\r/g, '').trim(),

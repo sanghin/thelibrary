@@ -1,3 +1,5 @@
+'use strict';
+
 // http://reustle.org/simple-site-scraping-with-nodejs-and-jsdom
 
 const fetch = require('node-fetch');

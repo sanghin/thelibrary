@@ -1,3 +1,5 @@
+'use strict';
+
 const urls = require('../utils/urls.js');
 const { scrapeForum } = require('./scrapeForum.js');
 

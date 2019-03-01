@@ -1,3 +1,5 @@
+'use strict';
+
 let urls = {
   base: 'https://www.pathofexile.com/',
   forum: 'forum/view-forum/',

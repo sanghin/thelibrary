@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs');
 const { scrapers } = require('./scraper/scrapers.js');
 const pg = require('pg');

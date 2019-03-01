@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Defines that we want an array of objects using the following selectors to populate their data.
  */
