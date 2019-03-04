@@ -6,6 +6,9 @@ services:
     build:
       context: ./
       dockerfile: ./docker/node/Dockerfile
+    volumes:
+      - .:/home/nodejs/poe-build-scraper
+      - /home/nodejs/poe-build-scraper/node_modules
     ports:
       - 9000:9000
     links:
