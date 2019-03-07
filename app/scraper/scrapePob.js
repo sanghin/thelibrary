@@ -11,4 +11,4 @@ const pob = Buffer.from(base64, 'base64');
 
 const buffer = inflateSync(pob);
 
-console.log(`WESH`);
+console.log(`WESH`, parser.toJson(buffer));
