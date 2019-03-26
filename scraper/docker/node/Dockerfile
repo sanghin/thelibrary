@@ -1,6 +1,6 @@
 # https://www.digitalocean.com/community/tutorials/how-to-build-a-node-js-application-with-docker#step-3-%E2%80%94-writing-the-dockerfile
 
-FROM node:10.15.0-jessie-slim
+FROM node:10.15.3-jessie-slim
 
 # Remove the version of yarn that is coming with node:10.15.0 & install given version of yarn
 RUN rm -f /usr/local/bin/yarn && \
