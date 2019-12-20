@@ -4,6 +4,7 @@ const regex = /^https:\/\/pastebin\.com\/(\w{8,}?)/;
 const fetch = require("node-fetch");
 const parser = require("xml2json");
 const { inflateSync } = require("zlib");
+const Build = require("../../server/database/model/build");
 
 /**
  * Convert PasteBin content to JSON
@@ -44,10 +45,12 @@ export default async (request, response) => {
   }
 
   try {
-    console.log(rawBuild);
+    console.log(JSON.stringify(rawBuild, 0, 4));
 
-    // const build = await new Photos({ PathOfBuilding: rawBuild.PathOfBuilding, importedAt: new Date().toUTCString() });
-    // await build.save();
+    await new Build({
+      created_at: new Date().toUTCString(),
+      pob: rawBuild
+    }).save();
   } catch (e) {
     console.error("Failed to save", e);
   }

@@ -1,6 +1,12 @@
 version: "3.7"
 
 services:
-  redis:
+  postgresql:
     container_name: siosa_postgres
-    image: postgres:12.1-alpine
+    image: siosa_postgres
+    build:
+      context: ./database
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../.volumes/postgresql:/var/lib/postgresql/data

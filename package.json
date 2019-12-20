@@ -2,10 +2,12 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.js"
   },
   "dependencies": {
     "bookshelf": "^1.0.1",
+    "dotenv": "^8.2.0",
     "knex": "^0.20.4",
     "next": "^9.1.5",
     "node-fetch": "^2.6.0",
