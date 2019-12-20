@@ -1,0 +1,3 @@
+CREATE USER siosa;
+
+CREATE DATABASE "siosa";

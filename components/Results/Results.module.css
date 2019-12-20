@@ -1,0 +1,14 @@
+.gem {
+  margin-right: 8px;
+}
+
+.total {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.build {
+  border: 1px solid black;
+  margin: 8px;
+  padding: 8px;
+}

@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+const { readFileSync, mkdirSync, writeFileSync, existsSync } = require('fs')
+const { homedir } = require('os')
+const path = require('path')
+const fetch = require('node-fetch')
+
+const GITMOJIS_URL = 'https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json'
+const CACHE_FOLDER_PATH = path.join(homedir(), '.gitmoji')
+const CACHE_FILE_PATH = path.join(CACHE_FOLDER_PATH, 'gitmojis.json')
+
+const fetchAndCacheGitmojis = async () => {
+  try {
+    const data = await fetch(GITMOJIS_URL).then((r) => r.json())
+    const emojis = data.gitmojis.reduce((list, gitmoji) => {
+      if (gitmoji && gitmoji.name) list.push(gitmoji.name.replace(/-/, '_'))
+
+      return list
+    }, [])
+
+    // eslint-disable-next-line no-console
+    console.info('Saving gitmojis cache')
+    if (!existsSync(CACHE_FOLDER_PATH)) {
+      mkdirSync(CACHE_FOLDER_PATH)
+    }
+
+    writeFileSync(CACHE_FILE_PATH, JSON.stringify(emojis))
+
+    return emojis
+  } catch (error) {
+    console.error(' > Error while fetching gitmojis list', error)
+    process.exit(1)
+  }
+}
+const getGitmojisFromCache = () => JSON.parse(readFileSync(CACHE_FILE_PATH))
+
+async function main() {
+  const gitmojisList = existsSync(CACHE_FILE_PATH) ? getGitmojisFromCache() : await fetchAndCacheGitmojis()
+
+  const COMMIT_MESSAGE = process.argv[2]
+  const input = readFileSync(COMMIT_MESSAGE, 'utf8').replace(/\n/g, '')
+  const match = input.match(/^:(\w{1,50}):/)
+
+  if (gitmojisList.includes(match[1])) {
+    // eslint-disable-next-line no-console
+    console.log('Valid commit message')
+    process.exit(0)
+  }
+
+  console.error('Invalid emoji. See https://gitmoji.carloscuesta.me/')
+  process.exit(1)
+}
+
+main()
