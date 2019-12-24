@@ -5,6 +5,14 @@
     "start": "next start",
     "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.js"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "scripts/commitmsg $HUSKY_GIT_PARAMS"
+    }
+  },
+  "engines": {
+    "node": "12.14.0"
+  },
   "dependencies": {
     "bookshelf": "^1.0.1",
     "dotenv": "^8.2.0",
@@ -19,6 +27,8 @@
   "devDependencies": {
     "@types/node": "^12.12.18",
     "@types/react": "^16.9.16",
+    "gitmoji-cli": "^3.0.1",
+    "husky": "^3.1.0",
     "typescript": "^3.7.3"
   }
 }
