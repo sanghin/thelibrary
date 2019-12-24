@@ -19,6 +19,8 @@
   "devDependencies": {
     "@types/node": "^12.12.18",
     "@types/react": "^16.9.16",
+    "gitmoji-cli": "^3.0.1",
+    "husky": "^3.1.0",
     "typescript": "^3.7.3"
   }
 }
