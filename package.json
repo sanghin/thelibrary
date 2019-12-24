@@ -5,6 +5,11 @@
     "start": "next start",
     "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.js"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "scripts/commitmsg $HUSKY_GIT_PARAMS"
+    }
+  },
   "dependencies": {
     "bookshelf": "^1.0.1",
     "dotenv": "^8.2.0",
