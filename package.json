@@ -10,6 +10,9 @@
       "commit-msg": "scripts/commitmsg $HUSKY_GIT_PARAMS"
     }
   },
+  "engines": {
+    "node": "12.14.0"
+  },
   "dependencies": {
     "bookshelf": "^1.0.1",
     "dotenv": "^8.2.0",
