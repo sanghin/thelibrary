@@ -1,4 +1,4 @@
-version: "3.7"
+version: '3.7'
 
 services:
   postgresql:
@@ -7,6 +7,9 @@ services:
     build:
       context: ./database
     ports:
-      - "5432:5432"
+      - '5432:5432'
     volumes:
-      - ../.volumes/postgresql:/var/lib/postgresql/data
+      - postgresql:/var/lib/postgresql/data
+
+volumes:
+  postgresql:

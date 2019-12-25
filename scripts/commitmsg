@@ -20,7 +20,7 @@ const fetchAndCacheGitmojis = async () => {
 
     console.info('Saving gitmojis cache');
     if (!existsSync(CACHE_FOLDER_PATH)) {
-      mkdirSync(path.dirname(CACHE_FOLDER_PATH));
+      mkdirSync(CACHE_FOLDER_PATH);
     }
 
     writeFileSync(CACHE_FILE_PATH, JSON.stringify(emojis));
