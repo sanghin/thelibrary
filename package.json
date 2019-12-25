@@ -23,7 +23,7 @@
     "start": "next start",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx",
-    "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.js"
+    "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.ts"
   },
   "husky": {
     "hooks": {
@@ -35,6 +35,7 @@
     "yarn": "^1.21.0"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "bookshelf": "^1.0.1",
     "dotenv": "^8.2.0",
     "knex": "^0.20.4",

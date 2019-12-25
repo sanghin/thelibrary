@@ -2,7 +2,7 @@
   "editor.formatOnSave": true,
   "prettier.jsxSingleQuote": true,
   "prettier.packageManager": "yarn",
-  "prettier.printWidth": 120,
+  "prettier.printWidth": 100,
   "prettier.singleQuote": true,
   "files.eol": "\n",
   "prettier.trailingComma": "es5",
