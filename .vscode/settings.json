@@ -4,5 +4,6 @@
   "prettier.packageManager": "yarn",
   "prettier.printWidth": 120,
   "prettier.singleQuote": true,
+  "files.eol": "\n",
   "prettier.trailingComma": "es5"
 }
