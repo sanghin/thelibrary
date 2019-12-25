@@ -1,35 +1,34 @@
-import db from '../../server/database/db';
+import knex from '../../server/database/db';
 
 const Search = async (request, response) => {
-  const { ascendancy } = request.query;
+  const params: SearchParams = request.method === 'POST' ? JSON.parse(request.body) : request.query;
+  const qb = knex('build');
 
-  db('build')
-    .modify((queryBuilder) => {
-      if (ascendancy) {
-        queryBuilder.whereRaw(
-          "pob->'PathOfBuilding'->'Build'->>'ascendClassName' = ?",
-          ascendancy.charAt(0).toUpperCase() + ascendancy.slice(1),
-        );
-      }
-    })
-    .then((results) => {
-      const data = results.map((build) => ({
-        id: build.id,
-        pob_raw: build.pob,
-        created_at: build.created_at,
-      }));
+  const keys = Object.keys(params);
+  for (const param of keys) {
+    const value = params[param];
 
-      response.status(200).json({
-        meta: [],
-        data,
-      });
-    })
-    .catch((error) => {
-      // eslint-disable-next-line no-console
-      console.error(error);
+    if (param === 'ascendancy') {
+      qb.whereRaw(
+        "pob->'PathOfBuilding'->'Build'->>'ascendClassName' = ?",
+        value.charAt(0).toUpperCase() + value.slice(1),
+      );
+    }
+  }
 
-      return response.status(500).end();
+  try {
+    const builds = await qb;
+
+    return response.status(200).json({
+      numberOfBuilds: builds.length,
+      builds,
     });
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(error);
+
+    return response.status(500).end();
+  }
 };
 
 export default Search;

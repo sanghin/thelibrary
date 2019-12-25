@@ -1,31 +1,25 @@
-import React, { KeyboardEvent, ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 
-const Index = () => {
-  const [value, setInputValue] = useState<string>('');
-  const [submitting, setSubmitting] = useState<boolean>(false);
+import Header from '../components/Header/Header';
+import Search from '../components/Search/Search';
+import Results from '../components/Results/Results';
 
-  const onKeyDown = async (event: KeyboardEvent<HTMLInputElement>) => {
-    if (event.keyCode === 13 && !submitting) {
-      setSubmitting(true);
+export default () => {
+  const [results, setResults] = useState<SearchResults | null>(null);
 
-      await fetch('/api/pastebin', { method: 'POST', body: `${value}` });
+  const onSearch = async (params: SearchParams) => {
+    const search: SearchResults = await fetch('/api/search', {
+      method: 'post', body: JSON.stringify(params),
+    }).then((r) => r.json());
 
-      setSubmitting(false);
-    }
-  };
-
-  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.currentTarget.value);
+    setResults(search);
   };
 
   return (
-    <div>
-      <label htmlFor="pastebinLink" className="label">
-        Import pastebin
-        <input id="pastebinLink" className="input" type="text" name="name" onKeyDown={onKeyDown} onChange={onChange} />
-      </label>
-    </div>
+    <>
+      <Header />
+      <Search onSearch={onSearch} />
+      <Results results={results} />
+    </>
   );
 };
-
-export default Index;
