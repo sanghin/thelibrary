@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - mnt/** # Push events to branches matching refs/heads/mnt/43
+      - bugfix/** # Push events to branches matching refs/heads/bugfix/13
+      - feature/** # Push events to branches matching refs/heads/feature/10
+name: Build, lint and test
+jobs:
+  job_build_test:
+    name: build and test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [13.x]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Uses Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install -g yarn
+      - name: yarn install, build
+        run: |
+          yarn install
+          yarn run build
+      # - name: ES Lint
+      #   run: |
+      #     yarn lint

@@ -17,3 +17,10 @@ docker-compose up -d
 ```
 docker-compose run --rm node yarn knex migrate:latest
 ```
+
+## Lint
+
+```
+docker-compose run --rm node yarn lint
+docker-compose run --rm node yarn lint-fix
+```
