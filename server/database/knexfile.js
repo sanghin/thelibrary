@@ -1,5 +1,5 @@
 // Loading manually as Knex will override the default one.
-require('dotenv').config({ path: process.env.PWD + '/.env' });
+require('dotenv').config({ path: `${process.env.PWD}/.env` });
 
 module.exports = {
   client: 'pg',
@@ -12,6 +12,6 @@ module.exports = {
   migrations: {
     extension: 'mjs',
     tableName: 'migrations',
-    directory: __dirname + '/migrations',
+    directory: `${__dirname}/migrations`,
   },
 };

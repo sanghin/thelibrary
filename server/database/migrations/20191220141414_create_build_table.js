@@ -1,13 +1,13 @@
-const TABLE_NAME = "build";
+const TABLE_NAME = 'build';
 
-exports.up = async function(knex) {
-  return knex.schema.createTable(TABLE_NAME, table => {
+exports.up = async function up(knex) {
+  return knex.schema.createTable(TABLE_NAME, (table) => {
     table.increments();
-    table.jsonb("pob");
+    table.jsonb('pob');
     table.timestamps();
   });
 };
 
-exports.down = async function(knex) {
+exports.down = async function down(knex) {
   return knex.schema.dropTable(TABLE_NAME);
 };
