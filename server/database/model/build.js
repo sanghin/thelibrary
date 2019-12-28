@@ -1,7 +1,7 @@
-const bookshelf = require("../bookshelf");
+const bookshelf = require('../bookshelf');
 
-const Build = bookshelf.model("Build", {
-  tableName: "build"
+const Build = bookshelf.model('Build', {
+  tableName: 'build',
 });
 
 module.exports = Build;

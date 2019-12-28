@@ -1,4 +1,5 @@
-const config = require("./knexfile");
-const knex = require("knex")(config);
+const config = require('./knexfile');
+// eslint-disable-next-line import/order
+const knex = require('knex')(config);
 
-module.exports = require("bookshelf")(knex);
+module.exports = require('bookshelf')(knex);
