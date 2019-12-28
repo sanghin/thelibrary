@@ -10,7 +10,7 @@ module.exports = {
     database: process.env.POSTGRES_DB,
   },
   migrations: {
-    extension: 'mjs',
+    extension: 'js',
     tableName: 'migrations',
     directory: `${__dirname}/migrations`,
   },

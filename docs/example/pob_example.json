@@ -1,0 +1,1248 @@
+{
+    "PathOfBuilding": {
+        "Tree": {
+            "Spec": {
+                "URL": "https://www.pathofexile.com/passive-skill-tree/AAAABAQCAFuvqW4UTSXfAeekGe0_UUcV7GSv_o8b-hiRDY0Wv_zFN9T8SzWS8MQOQwUtYeKfiWyMd6J4GW1sV5fpuWNwQzEC9owLwuwaVelGvTZF9BX2ivDnVOOftUiJ09i91gc26E2S02_uDsqQvJ9VSzz-ijjBoHTtI_a5HcAatfK-eLl8vqfawaZ_tMVHfmzYYnmtZTB8_gqTD52qgZuHdjmGZ6Cjii5T7UFKfRHVzV-TkJKAjb9hISPqNj2NgY19YEFwUm87jDaE74TZhG89ABX9TP_UQngNAAYk_ZoXd9cFtU4qXfIqC__e7LCXCGKsJpVlTXX9WK967w==",
+                "Sockets": {
+                    "Socket": [
+                        {
+                            "itemId": "0",
+                            "nodeId": "7960"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "61834"
+                        },
+                        {
+                            "itemId": "1",
+                            "nodeId": "28475"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "26196"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "36634"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "34483"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "21984"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "46882"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "61419"
+                        },
+                        {
+                            "itemId": "2",
+                            "nodeId": "54127"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "31683"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "55190"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "48768"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "2491"
+                        },
+                        {
+                            "itemId": "3",
+                            "nodeId": "60735"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "41263"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "6230"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "33631"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "33989"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "32763"
+                        },
+                        {
+                            "itemId": "0",
+                            "nodeId": "26725"
+                        }
+                    ]
+                },
+                "treeVersion": "3_9"
+            },
+            "activeSpec": "1"
+        },
+        "Build": {
+            "level": "94",
+            "bandit": "Alira",
+            "viewMode": "IMPORT",
+            "className": "Duelist",
+            "PlayerStat": [
+                {
+                    "stat": "AverageDamage",
+                    "value": "122304.44710947"
+                },
+                {
+                    "stat": "Speed",
+                    "value": "9.3984"
+                },
+                {
+                    "stat": "Speed",
+                    "value": "9.3984"
+                },
+                {
+                    "stat": "PreEffectiveCritChance",
+                    "value": "53.04875"
+                },
+                {
+                    "stat": "CritChance",
+                    "value": "76.45627746875"
+                },
+                {
+                    "stat": "CritMultiplier",
+                    "value": "4.26"
+                },
+                {
+                    "stat": "HitChance",
+                    "value": "98.5"
+                },
+                {
+                    "stat": "TotalDPS",
+                    "value": "2298932.2314273"
+                },
+                {
+                    "stat": "TotalDot",
+                    "value": "0"
+                },
+                {
+                    "stat": "BleedDPS",
+                    "value": "15176.676967024"
+                },
+                {
+                    "stat": "WithPoisonDPS",
+                    "value": "2298932.2314273"
+                },
+                {
+                    "stat": "ImpaleDPS",
+                    "value": "1854783.679791"
+                },
+                {
+                    "stat": "WithImpaleDPS",
+                    "value": "4153715.9112183"
+                },
+                {
+                    "stat": "ImpaleDPS",
+                    "value": "1854783.679791"
+                },
+                {
+                    "stat": "WithImpaleDPS",
+                    "value": "4153715.9112183"
+                },
+                {
+                    "stat": "ManaCost",
+                    "value": "20"
+                },
+                {
+                    "stat": "Str",
+                    "value": "276"
+                },
+                {
+                    "stat": "ReqStr",
+                    "value": "191"
+                },
+                {
+                    "stat": "Dex",
+                    "value": "306"
+                },
+                {
+                    "stat": "ReqDex",
+                    "value": "155"
+                },
+                {
+                    "stat": "Int",
+                    "value": "114"
+                },
+                {
+                    "stat": "ReqInt",
+                    "value": "113"
+                },
+                {
+                    "stat": "Life",
+                    "value": "5829"
+                },
+                {
+                    "stat": "Spec:LifeInc",
+                    "value": "180"
+                },
+                {
+                    "stat": "LifeUnreserved",
+                    "value": "5829"
+                },
+                {
+                    "stat": "LifeUnreservedPercent",
+                    "value": "100"
+                },
+                {
+                    "stat": "LifeRegen",
+                    "value": "151.554"
+                },
+                {
+                    "stat": "LifeLeechGainRate",
+                    "value": "1541.736"
+                },
+                {
+                    "stat": "Mana",
+                    "value": "655"
+                },
+                {
+                    "stat": "Spec:ManaInc",
+                    "value": "0"
+                },
+                {
+                    "stat": "ManaUnreserved",
+                    "value": "76"
+                },
+                {
+                    "stat": "ManaUnreservedPercent",
+                    "value": "11.603053435115"
+                },
+                {
+                    "stat": "ManaRegen",
+                    "value": "19.8"
+                },
+                {
+                    "stat": "ManaLeechGainRate",
+                    "value": "131"
+                },
+                {
+                    "stat": "TotalDegen",
+                    "value": "215.5376"
+                },
+                {
+                    "stat": "NetLifeRegen",
+                    "value": "-63.9836"
+                },
+                {
+                    "stat": "EnergyShield",
+                    "value": "28"
+                },
+                {
+                    "stat": "Spec:EnergyShieldInc",
+                    "value": "0"
+                },
+                {
+                    "stat": "EnergyShieldRegen",
+                    "value": "0"
+                },
+                {
+                    "stat": "EnergyShieldLeechGainRate",
+                    "value": "0"
+                },
+                {
+                    "stat": "Evasion",
+                    "value": "1090"
+                },
+                {
+                    "stat": "Spec:EvasionInc",
+                    "value": "36"
+                },
+                {
+                    "stat": "MeleeEvadeChance",
+                    "value": "5"
+                },
+                {
+                    "stat": "MeleeEvadeChance",
+                    "value": "5"
+                },
+                {
+                    "stat": "ProjectileEvadeChance",
+                    "value": "5"
+                },
+                {
+                    "stat": "Armour",
+                    "value": "9719"
+                },
+                {
+                    "stat": "Spec:ArmourInc",
+                    "value": "86"
+                },
+                {
+                    "stat": "PhysicalDamageReduction",
+                    "value": "52"
+                },
+                {
+                    "stat": "EffectiveMovementSpeedMod",
+                    "value": "1.656"
+                },
+                {
+                    "stat": "BlockChance",
+                    "value": "17"
+                },
+                {
+                    "stat": "SpellBlockChance",
+                    "value": "0"
+                },
+                {
+                    "stat": "AttackDodgeChance",
+                    "value": "0"
+                },
+                {
+                    "stat": "SpellDodgeChance",
+                    "value": "0"
+                },
+                {
+                    "stat": "FireResist",
+                    "value": "76"
+                },
+                {
+                    "stat": "ColdResist",
+                    "value": "76"
+                },
+                {
+                    "stat": "LightningResist",
+                    "value": "76"
+                },
+                {
+                    "stat": "ChaosResist",
+                    "value": "-60"
+                },
+                {
+                    "stat": "FireResistOverCap",
+                    "value": "17"
+                },
+                {
+                    "stat": "ColdResistOverCap",
+                    "value": "12"
+                },
+                {
+                    "stat": "LightningResistOverCap",
+                    "value": "14"
+                },
+                {
+                    "stat": "ChaosResistOverCap",
+                    "value": "0"
+                },
+                {
+                    "stat": "PowerCharges",
+                    "value": "3"
+                },
+                {
+                    "stat": "PowerChargesMax",
+                    "value": "3"
+                },
+                {
+                    "stat": "FrenzyCharges",
+                    "value": "3"
+                },
+                {
+                    "stat": "FrenzyChargesMax",
+                    "value": "3"
+                },
+                {
+                    "stat": "EnduranceCharges",
+                    "value": "0"
+                },
+                {
+                    "stat": "EnduranceChargesMax",
+                    "value": "3"
+                },
+                {
+                    "stat": "ActiveTotemLimit",
+                    "value": "1"
+                }
+            ],
+            "banditCruel": "None",
+            "banditNormal": "None",
+            "targetVersion": "3_0",
+            "ascendClassName": "Gladiator",
+            "banditMerciless": "None",
+            "mainSocketGroup": "1",
+            "pantheonMajorGod": "None",
+            "pantheonMinorGod": "None"
+        },
+        "Calcs": {
+            "Input": [
+                {
+                    "name": "skill_number",
+                    "number": "1"
+                },
+                {
+                    "name": "misc_buffMode",
+                    "string": "EFFECTIVE"
+                }
+            ],
+            "Section": [
+                {
+                    "id": "SkillSelect",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "HitDamage",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Dot",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Speed",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Crit",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "HitChance",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "SkillTypeStats",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Bleed",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Impale",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Poison",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Ignite",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Decay",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "LeechGain",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "EleAilments",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "MiscEffects",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Attributes",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Life",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Mana",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "EnergyShield",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Armour",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Evasion",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "Resist",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "DamageTaken",
+                    "collapsed": "nil"
+                },
+                {
+                    "id": "MiscDefences",
+                    "collapsed": "nil"
+                }
+            ]
+        },
+        "Items": {
+            "Item": [
+                {
+                    "$t": "Rarity: RARE\nBrood Star\nViridian Jewel\nUnique ID: f461b27e915d003a524556ad28b0efdff7a56419e49048880a86beba8a1a304d\nItem Level: 74\nImplicits: 0\n5% increased Attack Speed\n3% increased Attack and Cast Speed\n+17% to Critical Strike Multiplier while Dual Wielding",
+                    "id": "1"
+                },
+                {
+                    "$t": "Rarity: RARE\nGhoul Vessel\nViridian Jewel\nUnique ID: 81f4c6f7450bc433db2fae9289493d7c49c81db86c540264c9bb739781f615d1\nItem Level: 72\nImplicits: 0\n4% increased Attack Speed\n+10% to Global Critical Strike Multiplier\n+16% to Critical Strike Multiplier while Dual Wielding",
+                    "id": "2"
+                },
+                {
+                    "$t": "Rarity: RARE\nLoath Glisten\nCrimson Jewel\nUnique ID: 74a901ff7297672d7c56d31da5a1e3814c8983faa8462b041fc77f474a54e20c\nItem Level: 58\nImplicits: 0\n4% increased Attack Speed\n6% increased Attack Speed with One Handed Melee Weapons\n+11% to Global Critical Strike Multiplier",
+                    "id": "3"
+                },
+                {
+                    "$t": "Rarity: RARE\nDamnation Spiral\nTopaz Ring\nUnique ID: 4b51bd57311b44e9fe453f8c297a12148404fd3abbdc149cfeea3065aa8e4ca4\nItem Level: 83\nLevelReq: 60\nImplicits: 1\n+29% to Lightning Resistance\n+37 to Intelligence\nAdds 11 to 27 Fire Damage to Attacks\n+61 to maximum Life\n+35% to Cold Resistance\n{crafted}+1 to Minimum Frenzy Charges",
+                    "id": "4"
+                },
+                {
+                    "$t": "Rarity: UNIQUE\nLion's Roar\nGranite Flask\nUnique ID: 90f20c000ca02eb41c28d4215fc257672d5c5bfcc2cca319f0d30e73c9571cb4\nItem Level: 37\nQuality: 20\nLevelReq: 27\nImplicits: 0\nAdds Knockback to Melee Attacks during Flask effect\nKnocks Back Enemies in an Area when you use a Flask\n75% chance to cause Enemies to Flee on use\n20% more Melee Physical Damage during effect",
+                    "id": "5"
+                },
+                {
+                    "$t": "Rarity: RARE\nCorruption Sanctuary\nGlorious Plate\nUnique ID: 3d9bff169d6442271fb2f24636b39fd4f179ee8a818a4d49b838ead3f101a7b7\nItem Level: 100\nQuality: 20\nSockets: G-R-R-G-R-R\nLevelReq: 68\nImplicits: 0\n+17 to Strength\n+49 to Armour\n+140 to maximum Life\n+33% to Fire Resistance\n3% additional Physical Damage Reduction\n{crafted}74% increased Armour",
+                    "id": "6"
+                },
+                {
+                    "$t": "Rarity: RARE\nGhoul Peak\nCrusader Helmet\nUnique ID: 0ec8f46522265479cd3de7a29b45517d39d0d7af8ec8fec527dc397a33b55e51\nItem Level: 78\nQuality: 20\nSockets: G-G-R-R\nLevelReq: 31\nImplicits: 1\n{crafted}Double Strike has a 15% chance to deal Double Damage to Bleeding Enemies\n+36 to Strength\n+94 to maximum Life\n+19% to Lightning Resistance\nNearby Enemies take 9% increased Physical Damage\n{crafted}15% increased Armour and Energy Shield\n{crafted}+13 to maximum Life",
+                    "id": "7"
+                },
+                {
+                    "$t": "Rarity: UNIQUE\nRyslatha's Coil\nStudded Belt\nUnique ID: 99227499736bb190d72d23825d3efb40962b42bb1b0c5deaaafe950c107e5658\nItem Level: 40\nLevelReq: 32\nImplicits: 1\n24% increased Stun Duration on Enemies\n+40 to Strength\n38% more Maximum Physical Attack Damage\n33% less Minimum Physical Attack Damage\nAdds 1 to 18 Physical Damage to Attacks\n+93 to maximum Life\nGain 50 Life when you Stun an Enemy",
+                    "id": "8"
+                },
+                {
+                    "$t": "Rarity: RARE\nHollow Sphere\nMurderous Eye Jewel\nUnique ID: e0a57a146f0f9b0833f6a00a6b697d159771032785d597d3073c0e82f52cbcb3\nItem Level: 78\nLevelReq: 28\nImplicits: 0\n+30 to maximum Life\n+12% to Fire and Cold Resistances\n8% increased Attack Speed if you've dealt a Critical Strike Recently",
+                    "id": "9"
+                },
+                {
+                    "$t": "Rarity: UNIQUE\nTombfist\nSteelscale Gauntlets\nUnique ID: e973c66118c64f9ae2ab2fcbc338c3647e44305c42cd335067b4f03c1b94412f\nItem Level: 81\nQuality: 0\nSockets: G-B-G A\nLevelReq: 36\nImplicits: 1\nCurse Enemies with Level 12 Vulnerability on Hit\nHas 1 Abyssal Socket\n5% increased maximum Life\nWith a Murderous Eye Jewel Socketed, Intimidate Enemies for 4 seconds on Hit with Attacks\nWith a Searching Eye Jewel Socketed, Maim Enemies for 4 seconds on Hit with Attacks\nCorrupted",
+                    "id": "10"
+                },
+                {
+                    "$t": "Rarity: UNIQUE\nThe Wasp Nest\nThroat Stabber\nUnique ID: f567e944cf54d39dad54a417e54c21c12e48b673a59bd99915b3dac908b5a433\nItem Level: 73\nQuality: 26\nSockets: R-G-G\nLevelReq: 60\nImplicits: 1\n+40 Life gained for each Enemy hit by Attacks\n170% increased Physical Damage\n25% increased Attack Speed\n22% increased Critical Strike Chance\n+338 to Accuracy Rating\n20% chance to Poison on Hit\nAttacks with this Weapon deal 80-120 added Chaos Damage against\nEnemies affected by at least 5 Poisons",
+                    "id": "11"
+                },
+                {
+                    "$t": "Rarity: MAGIC\nAmple Sulphur Flask of Bloodletting\nUnique ID: 60aac2ef523697da356110f56ea3f98dd636e895a05f3840a8df6e801aca11ba\nItem Level: 65\nQuality: 0\nLevelReq: 35\nImplicits: 1\nCreates Consecrated Ground on Use\n+18 to Maximum Charges\n0.4% of Attack Damage Leeched as Life during Flask effect",
+                    "id": "12"
+                },
+                {
+                    "$t": "Rarity: NORMAL\nCorsair Sword\nUnique ID: 5f06396eba30b237f49f6b06b82e6b3244003e8e0e12221580f9786180973d5c\nItem Level: 69\nQuality: 0\nSockets: R R G\nLevelReq: 58\nImplicits: 1\n40% increased Global Accuracy Rating",
+                    "id": "13"
+                },
+                {
+                    "$t": "Rarity: MAGIC\nAnnealed Corsair Sword of the Yeti\nUnique ID: b74b4cdad838f02780fd1275ea08bb0bfa6c4aa73065289d92733a32514084c1\nItem Level: 69\nQuality: 0\nSockets: G R-R\nLevelReq: 58\nImplicits: 1\n40% increased Global Accuracy Rating\nAdds 13 to 27 Physical Damage\n+29% to Cold Resistance",
+                    "id": "14"
+                },
+                {
+                    "$t": "Rarity: MAGIC\nChemist's Eternal Life Flask of Heat\nUnique ID: 1f73ad6413832126245649e4c7a3befd5537dcf38fd18746cbd9f1ed2a0ef404\nItem Level: 71\nQuality: 20\nLevelReq: 65\nImplicits: 0\n24% reduced Charges used\nImmunity to Freeze and Chill during Flask effect\nRemoves Freeze and Chill on use",
+                    "id": "15"
+                },
+                {
+                    "$t": "Rarity: MAGIC\nAmple Diamond Flask of Warding\nUnique ID: 567082fd51bb72b1477619bfcbaad5b5280ee84064b660cfeff7efa84de61f45\nItem Level: 75\nQuality: 20\nLevelReq: 27\nImplicits: 0\n+17 to Maximum Charges\nImmune to Curses during Flask effect\nRemoves Curses on use",
+                    "id": "16"
+                },
+                {
+                    "$t": "Rarity: MAGIC\nExperimenter's Silver Flask of Staunching\nUnique ID: f281e2118f5a31b606085f8c45013eaaa15024070c3d34e3f2eba83e02374bd6\nItem Level: 42\nQuality: 20\nLevelReq: 22\nImplicits: 0\nImmunity to Bleeding during Flask effect\nRemoves Bleeding on use\n33% increased Duration",
+                    "id": "17"
+                },
+                {
+                    "$t": "Rarity: RARE\nBlight Rosary\nTurquoise Amulet\nUnique ID: d3cef865c6d237b6d0ffee9700281af74b017423c568ea51dea5d1dff8783356\nItem Level: 75\nLevelReq: 60\nImplicits: 2\n{crafted}Allocates Tribal Fury\n+23 to Dexterity and Intelligence\n+476 to Accuracy Rating\n+37% to Global Critical Strike Multiplier\n4% increased Armour\n3% increased Evasion Rating\n+77 to maximum Life\n5% increased maximum Life\n{crafted}+1 to Minimum Frenzy Charges",
+                    "id": "18"
+                },
+                {
+                    "$t": "Rarity: RARE\nWoe Trail\nDragonscale Boots\nUnique ID: 05dd3c3b6ecc8a8c6e10102ea327208c65ec3628405029969c5be981aa03e3a9\nItem Level: 72\nQuality: 20\nSockets: R-R-R-R\nLevelReq: 65\nImplicits: 0\n+32 to Armour\n+95 to maximum Life\n+44% to Cold Resistance\n+45% to Lightning Resistance\n{crafted}+20% to Cold and Lightning Resistances",
+                    "id": "19"
+                },
+                {
+                    "$t": "Rarity: UNIQUE\nBloodseeker\nHellion's Paw\nUnique ID: 8438f8211a7a347eb5da2e35a95adbb2b3e4e6887c4cde9a2136ca917aaa7072\nItem Level: 80\nQuality: 0\nSockets: R-R B\nLevelReq: 62\nImplicits: 1\n7% chance to gain a Power Charge on Critical Strike\n154% increased Physical Damage\nAdds 10 to 12 Physical Damage\n5% increased Attack Speed\n1.2% of Physical Attack Damage Leeched as Life\n5% increased Movement Speed\nLife Leech from Hits with this Weapon is instant\nCorrupted",
+                    "id": "20"
+                },
+                {
+                    "$t": "Rarity: RARE\nDoom Knot\nRuby Ring\nUnique ID: a1ac17cf78e32dd3254f69874b3bdf50bf452a244004c678b9ba12f885aa5e7a\nItem Level: 64\nLevelReq: 60\nImplicits: 1\n+30% to Fire Resistance\n+69 to maximum Life\n+12% to all Elemental Resistances\n+41% to Fire Resistance\n0.27% of Physical Attack Damage Leeched as Mana\n{crafted}+1 to Minimum Frenzy Charges",
+                    "id": "21"
+                }
+            ],
+            "Slot": [
+                {
+                    "name": "Gloves",
+                    "itemId": "10"
+                },
+                {
+                    "name": "Weapon 1",
+                    "itemId": "11"
+                },
+                {
+                    "name": "Flask 3",
+                    "active": "true",
+                    "itemId": "17"
+                },
+                {
+                    "name": "Amulet",
+                    "itemId": "18"
+                },
+                {
+                    "name": "Flask 1",
+                    "active": "true",
+                    "itemId": "15"
+                },
+                {
+                    "name": "Flask 5",
+                    "active": "true",
+                    "itemId": "16"
+                },
+                {
+                    "name": "Flask 2",
+                    "active": "true",
+                    "itemId": "12"
+                },
+                {
+                    "name": "Weapon 2 Swap",
+                    "itemId": "14"
+                },
+                {
+                    "name": "Weapon 2",
+                    "itemId": "20"
+                },
+                {
+                    "name": "Body Armour",
+                    "itemId": "6"
+                },
+                {
+                    "name": "Flask 4",
+                    "active": "true",
+                    "itemId": "5"
+                },
+                {
+                    "name": "Weapon 1 Swap",
+                    "itemId": "13"
+                },
+                {
+                    "name": "Ring 2",
+                    "itemId": "4"
+                },
+                {
+                    "name": "Gloves Abyssal Socket 1",
+                    "itemId": "9"
+                },
+                {
+                    "name": "Boots",
+                    "itemId": "19"
+                },
+                {
+                    "name": "Ring 1",
+                    "itemId": "21"
+                },
+                {
+                    "name": "Helmet",
+                    "itemId": "7"
+                },
+                {
+                    "name": "Belt",
+                    "itemId": "8"
+                }
+            ],
+            "ItemSet": {
+                "id": "1",
+                "Slot": [
+                    {
+                        "name": "Gloves",
+                        "itemId": "10"
+                    },
+                    {
+                        "name": "Weapon 1",
+                        "itemId": "11"
+                    },
+                    {
+                        "name": "Weapon 2Swap Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Belt Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Flask 3",
+                        "active": "true",
+                        "itemId": "17"
+                    },
+                    {
+                        "name": "Body Armour Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Amulet",
+                        "itemId": "18"
+                    },
+                    {
+                        "name": "Flask 1",
+                        "active": "true",
+                        "itemId": "15"
+                    },
+                    {
+                        "name": "Weapon 2Swap Abyssal Socket 1",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Flask 5",
+                        "active": "true",
+                        "itemId": "16"
+                    },
+                    {
+                        "name": "Belt Abyssal Socket 1",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Flask 2",
+                        "active": "true",
+                        "itemId": "12"
+                    },
+                    {
+                        "name": "Helmet Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Weapon 2 Swap",
+                        "itemId": "14"
+                    },
+                    {
+                        "name": "Weapon 1 Abyssal Socket 1",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Weapon 2",
+                        "itemId": "20"
+                    },
+                    {
+                        "name": "Body Armour",
+                        "itemId": "6"
+                    },
+                    {
+                        "name": "Flask 4",
+                        "active": "true",
+                        "itemId": "5"
+                    },
+                    {
+                        "name": "Weapon 1 Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Weapon 2 Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Weapon 1 Swap",
+                        "itemId": "13"
+                    },
+                    {
+                        "name": "Ring 2",
+                        "itemId": "4"
+                    },
+                    {
+                        "name": "Boots Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Gloves Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Body Armour Abyssal Socket 1",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Gloves Abyssal Socket 1",
+                        "itemId": "9"
+                    },
+                    {
+                        "name": "Helmet Abyssal Socket 1",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Weapon 2 Abyssal Socket 1",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Boots",
+                        "itemId": "19"
+                    },
+                    {
+                        "name": "Weapon 1Swap Abyssal Socket 1",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Ring 1",
+                        "itemId": "21"
+                    },
+                    {
+                        "name": "Weapon 1Swap Abyssal Socket 2",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Helmet",
+                        "itemId": "7"
+                    },
+                    {
+                        "name": "Boots Abyssal Socket 1",
+                        "itemId": "0"
+                    },
+                    {
+                        "name": "Belt",
+                        "itemId": "8"
+                    }
+                ],
+                "useSecondWeaponSet": "nil"
+            },
+            "activeItemSet": "1",
+            "useSecondWeaponSet": "nil"
+        },
+        "Notes": "",
+        "Config": {
+            "Input": [
+                {
+                    "name": "conditionEnemyIntimidated",
+                    "boolean": "true"
+                },
+                {
+                    "name": "useFrenzyCharges",
+                    "boolean": "true"
+                },
+                {
+                    "name": "enemyIsBoss",
+                    "string": "SHAPER"
+                },
+                {
+                    "name": "conditionEnemyBleeding",
+                    "boolean": "true"
+                },
+                {
+                    "name": "useChallengerCharges",
+                    "boolean": "true"
+                },
+                {
+                    "name": "usePowerCharges",
+                    "boolean": "true"
+                },
+                {
+                    "name": "conditionUsedMovementSkillRecently",
+                    "boolean": "true"
+                }
+            ]
+        },
+        "Import": {
+            "lastRealm": "PC",
+            "lastAccountHash": "1019350da8d0421ce60aa9c15854774201195021",
+            "lastCharacterHash": "5d3acca582bccdecc7482263743a26f07bf0a61d"
+        },
+        "Skills": {
+            "Skill": [
+                {
+                    "Gem": [
+                        {
+                            "gemId": "Metadata/Items/Gems/SkillGemVaalDoubleStrike",
+                            "level": "20",
+                            "enabled": "true",
+                            "quality": "18",
+                            "skillId": "VaalDoubleStrike",
+                            "nameSpec": "Vaal Double Strike",
+                            "skillMinion": "SummonedPhantasm",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemBrutality",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportBrutality",
+                            "nameSpec": "Brutality",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemMultistrike",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportMultistrike",
+                            "nameSpec": "Multistrike",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemImpale",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportImpale",
+                            "nameSpec": "Impale",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemMeleePhysicalDamage",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportMeleePhysicalDamage",
+                            "nameSpec": "Melee Physical Damage",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemMeleeSplash",
+                            "level": "19",
+                            "enabled": "false",
+                            "quality": "20",
+                            "skillId": "SupportMeleeSplash",
+                            "nameSpec": "Melee Splash",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemRuthless",
+                            "level": "20",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportRuthless",
+                            "nameSpec": "Ruthless",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        }
+                    ],
+                    "slot": "Body Armour",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "2",
+                    "mainActiveSkillCalcs": "1"
+                },
+                {
+                    "Gem": [
+                        {
+                            "gemId": "Metadata/Items/Gems/SkillGemWhirlingBlades",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "WhirlingBlades",
+                            "nameSpec": "Whirling Blades",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemFasterAttack",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportFasterAttack",
+                            "nameSpec": "Faster Attacks",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemFortify",
+                            "level": "16",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportFortify",
+                            "nameSpec": "Fortify",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemBloodMagic",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportBloodMagic",
+                            "nameSpec": "Blood Magic",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        }
+                    ],
+                    "slot": "Helmet",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": {
+                        "gemId": "Metadata/Items/Gems/SkillGemPrecision",
+                        "level": "1",
+                        "enabled": "true",
+                        "quality": "0",
+                        "skillId": "AccuracyAndCritsAura",
+                        "nameSpec": "Precision",
+                        "enableGlobal1": "true",
+                        "enableGlobal2": "nil"
+                    },
+                    "slot": "Gloves",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": [
+                        {
+                            "gemId": "Metadata/Items/Gems/SkillGemPride",
+                            "level": "20",
+                            "enabled": "true",
+                            "quality": "0",
+                            "skillId": "PhysicalDamageAura",
+                            "nameSpec": "Pride",
+                            "skillPart": "1",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SkillGemBloodRage",
+                            "level": "16",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "BloodRage",
+                            "nameSpec": "Blood Rage",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SkillGemDash",
+                            "level": "20",
+                            "enabled": "true",
+                            "quality": "0",
+                            "skillId": "QuickDodge",
+                            "nameSpec": "Dash",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        }
+                    ],
+                    "slot": "Weapon 1",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": {
+                        "gemId": "Metadata/Items/Gems/SupportGemMultistrike",
+                        "level": "15",
+                        "enabled": "true",
+                        "quality": "20",
+                        "skillId": "SupportMultistrike",
+                        "nameSpec": "Multistrike",
+                        "enableGlobal1": "true",
+                        "enableGlobal2": "nil"
+                    },
+                    "slot": "Weapon 1 Swap",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": {
+                        "gemId": "Metadata/Items/Gems/SkillGemVolatileDead",
+                        "level": "16",
+                        "enabled": "true",
+                        "quality": "20",
+                        "skillId": "VolatileDead",
+                        "nameSpec": "Volatile Dead",
+                        "enableGlobal1": "true",
+                        "enableGlobal2": "nil"
+                    },
+                    "slot": "Weapon 1 Swap",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": {
+                        "gemId": "Metadata/Items/Gems/SkillGemBladeVortex",
+                        "level": "16",
+                        "enabled": "true",
+                        "quality": "20",
+                        "skillId": "BladeVortex",
+                        "nameSpec": "Blade Vortex",
+                        "enableGlobal1": "true",
+                        "enableGlobal2": "nil"
+                    },
+                    "slot": "Weapon 2 Swap",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": [
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemMultistrike",
+                            "level": "15",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportMultistrike",
+                            "nameSpec": "Multistrike",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemSpiritStrike",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportSpiritStrike",
+                            "nameSpec": "Ancestral Call",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        }
+                    ],
+                    "slot": "Weapon 2 Swap",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": [
+                        {
+                            "gemId": "Metadata/Items/Gems/SkillGemMeleeTotem",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "TotemMelee",
+                            "nameSpec": "Ancestral Protector",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemRuthless",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportRuthless",
+                            "nameSpec": "Ruthless",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemMeleePhysicalDamage",
+                            "level": "17",
+                            "enabled": "true",
+                            "quality": "0",
+                            "skillId": "SupportMeleePhysicalDamage",
+                            "nameSpec": "Melee Physical Damage",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SupportGemBloodlust",
+                            "level": "16",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "SupportBloodlust",
+                            "nameSpec": "Bloodlust",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        }
+                    ],
+                    "slot": "Boots",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": [
+                        {
+                            "gemId": "Metadata/Items/Gems/SkillGemFleshAndStone",
+                            "level": "20",
+                            "enabled": "true",
+                            "quality": "0",
+                            "skillId": "BloodSandArmour",
+                            "nameSpec": "Flesh and Stone",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        },
+                        {
+                            "gemId": "Metadata/Items/Gems/SkillGemDreadBanner",
+                            "level": "19",
+                            "enabled": "true",
+                            "quality": "20",
+                            "skillId": "PuresteelBanner",
+                            "nameSpec": "Dread Banner",
+                            "enableGlobal1": "true",
+                            "enableGlobal2": "nil"
+                        }
+                    ],
+                    "slot": "Weapon 2",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": {
+                        "gemId": "Metadata/Items/Gems/SkillGemPortal",
+                        "level": "1",
+                        "enabled": "true",
+                        "quality": "0",
+                        "skillId": "Portal",
+                        "nameSpec": "Portal",
+                        "enableGlobal1": "true",
+                        "enableGlobal2": "nil"
+                    },
+                    "slot": "Weapon 2",
+                    "label": "",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                },
+                {
+                    "Gem": {
+                        "level": "12",
+                        "enabled": "true",
+                        "quality": "0",
+                        "skillId": "Vulnerability",
+                        "nameSpec": "",
+                        "enableGlobal1": "true",
+                        "enableGlobal2": "nil"
+                    },
+                    "slot": "Gloves",
+                    "label": "",
+                    "source": "Item:10:Tombfist, Steelscale Gauntlets",
+                    "enabled": "true",
+                    "mainActiveSkill": "nil",
+                    "mainActiveSkillCalcs": "nil"
+                }
+            ],
+            "sortGemsByDPS": "true",
+            "defaultGemLevel": "nil",
+            "defaultGemQuality": "nil"
+        },
+        "TreeView": {
+            "zoomX": "-9.3532777777782",
+            "zoomY": "-495.43971111111",
+            "searchStr": "",
+            "zoomLevel": "7",
+            "showHeatMap": "nil",
+            "showStatDifferences": "true"
+        }
+    }
+}

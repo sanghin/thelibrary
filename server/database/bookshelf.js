@@ -1,5 +1,10 @@
-const config = require('./knexfile');
-// eslint-disable-next-line import/order
-const knex = require('knex')(config);
+import bookshelf from 'bookshelf';
+import knexInstance from './connection';
 
-module.exports = require('bookshelf')(knex);
+let bookshelfInstance;
+
+if (!bookshelfInstance) {
+  bookshelfInstance = bookshelf(knexInstance);
+}
+
+export default bookshelfInstance;

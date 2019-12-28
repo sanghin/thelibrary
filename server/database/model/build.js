@@ -1,6 +1,6 @@
-const bookshelf = require('../bookshelf');
+const bookshelfInstance = require('../bookshelf').default;
 
-const Build = bookshelf.model('Build', {
+const Build = bookshelfInstance.model('Build', {
   tableName: 'build',
 });
 

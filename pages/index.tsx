@@ -1,6 +1,6 @@
 import React, { KeyboardEvent, ChangeEvent, useState } from 'react';
 
-export default () => {
+const Index = () => {
   const [value, setInputValue] = useState<string>('');
   const [submitting, setSubmitting] = useState<boolean>(false);
 
@@ -27,3 +27,5 @@ export default () => {
     </div>
   );
 };
+
+export default Index;
