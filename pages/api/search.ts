@@ -1,10 +1,9 @@
-import Build from '../../server/database/model/build';
-import knexInstance from '../../server/database/connection';
+import db from '../../server/database/db';
 
 const Search = async (request, response) => {
   const { ascendancy } = request.query;
 
-  knexInstance<Build>('build')
+  db('build')
     .modify((queryBuilder) => {
       if (ascendancy) {
         queryBuilder.whereRaw(

@@ -1,10 +1,10 @@
 import bookshelf from 'bookshelf';
-import knexInstance from './connection';
+import db from './db';
 
 let bookshelfInstance;
 
 if (!bookshelfInstance) {
-  bookshelfInstance = bookshelf(knexInstance);
+  bookshelfInstance = bookshelf(db);
 }
 
 export default bookshelfInstance;

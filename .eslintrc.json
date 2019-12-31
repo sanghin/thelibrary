@@ -24,6 +24,18 @@
     "react",
     "@typescript-eslint"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
   "rules": {
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
@@ -36,6 +48,16 @@
         ]
       }
     ],
-    "import/no-mutable-exports": "off"
+    "import/no-mutable-exports": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   }
 }
