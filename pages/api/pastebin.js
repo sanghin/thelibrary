@@ -59,5 +59,8 @@ export default async (request, response) => {
     return null;
   }
 
-  return response.end();
+  return response.status(201).json({
+    meta: [],
+    message: 'Success',
+  });
 };
