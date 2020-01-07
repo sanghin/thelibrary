@@ -11,9 +11,12 @@ RUN apk add --no-cache --virtual .gyp \
 
 WORKDIR /app
 
-COPY . .
+COPY package*.json ./
+COPY yarn.lock ./
 
 RUN yarn install
+
+COPY . .
 
 EXPOSE ${PORT}
 
