@@ -23,7 +23,7 @@
     "start": "next start",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx",
-    "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.js"
+    "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.ts"
   },
   "husky": {
     "hooks": {
