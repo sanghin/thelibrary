@@ -1,3 +1,3 @@
-import { dbConfig } from './db';
+const { dbConfig } = require('./db.ts');
 
 module.exports = dbConfig;
