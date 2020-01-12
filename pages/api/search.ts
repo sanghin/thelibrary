@@ -1,8 +1,8 @@
-import knex from '../../server/database/db';
+import db from 'Server/database/db';
 
 const Search = async (request, response) => {
   const params: SearchParams = request.method === 'POST' ? JSON.parse(request.body) : request.query;
-  const qb = knex('build');
+  const qb = db('build');
 
   const keys = Object.keys(params);
   for (const param of keys) {

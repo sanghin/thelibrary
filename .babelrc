@@ -1,0 +1,33 @@
+{
+    "presets": [
+        "next/babel",
+        "@babel/preset-typescript"
+    ],
+    "env": {
+        "testing": {
+            "plugins": [
+                [
+                    "dynamic-import-node"
+                ]
+            ]
+        }
+    },
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./"
+                ],
+                "alias": {
+                    "Components": "./components",
+                    "Server": "./server",
+                    "Root": "./",
+                    "Test": "./tests",
+                    "Pages": "./pages",
+                    "TestData": "./tests/test-data"
+                }
+            }
+        ]
+    ]
+}

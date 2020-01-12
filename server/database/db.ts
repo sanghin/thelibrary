@@ -1,9 +1,9 @@
-const { config } = require('dotenv');
-const Knex = require('knex');
+import Knex from 'knex';
+import { config } from 'dotenv';
 
 config({ path: `${process.env.PWD}/.env` });
 
-const knexConfig = {
+export const dbConfig = {
   client: 'pg',
   connection: {
     host: process.env.POSTGRES_HOST,
@@ -20,7 +20,6 @@ const knexConfig = {
   },
 };
 
-const db = Knex(knexConfig);
+const db: Knex = Knex(dbConfig as Knex.Config);
 
-exports.default = db;
-exports.dbConfig = knexConfig;
+export default db;
