@@ -1,5 +1,3 @@
-import * as Knex from 'knex'
+export async function up(knex) => knex.schema
 
-export async function up(knex: Knex): Promise<any> => knex.schema
-
-export async function down(knex: Knex): Promise<any> => knex.schema
+export async function down(knex) => knex.schema

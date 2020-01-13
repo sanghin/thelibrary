@@ -25,7 +25,7 @@
     "lint-fix": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx",
     "test": "NODE_ENV=testing jest",
     "test-coverage": "NODE_ENV=testing jest --coverage --coverageDirectory=output/coverage/jest",
-    "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.ts"
+    "knex": "$(yarn bin)/knex --knexfile ./server/database/knexfile.js"
   },
   "husky": {
     "hooks": {

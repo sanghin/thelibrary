@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -21,34 +17,13 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "Components/*": [
-        "./components/*"
-      ],
-      "Pages/*": [
-        "./pages/*"
-      ],
-      "Server/*": [
-        "./server/*"
-      ],
-      "TestData/*": [
-        "./tests/test-data/*"
-      ],
-      "Test/*": [
-        "./tests/*"
-      ]
+      "Components/*": ["./components/*"],
+      "Pages/*": ["./pages/*"],
+      "TestData/*": ["./tests/test-data/*"],
+      "Test/*": ["./tests/*"]
     },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ]
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "siosa.d.ts"
-  ]
+  "exclude": ["node_modules", "server/**"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "siosa.d.ts"]
 }
