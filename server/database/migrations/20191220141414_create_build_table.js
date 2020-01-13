@@ -1,8 +1,6 @@
-import * as Knex from 'knex';
-
 const TABLE_NAME = 'build';
 
-export async function up(knex: Knex): Promise<any> {
+export async function up(knex) {
   return knex.schema.createTable(TABLE_NAME, (table) => {
     table.increments();
     table.jsonb('pob');
@@ -10,6 +8,6 @@ export async function up(knex: Knex): Promise<any> {
   });
 }
 
-export async function down(knex: Knex): Promise<any> {
+export async function down(knex) {
   return knex.schema.dropTable(TABLE_NAME);
 };

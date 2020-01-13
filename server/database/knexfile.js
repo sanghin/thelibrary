@@ -1,5 +1,3 @@
-require('ts-node/register');
-
 const { config } = require('dotenv');
 config({ path: `${process.env.PWD}/.env` });
 
@@ -14,7 +12,6 @@ module.exports = {
     migrations: {
         // This is missing from the TypeScript types currently.
         stub: 'migration.stub',
-        extension: 'ts',
         tableName: 'migrations',
         directory: `${__dirname}/migrations`,
     },

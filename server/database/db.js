@@ -20,6 +20,6 @@ export const dbConfig = {
   },
 };
 
-const db: Knex = Knex(dbConfig as Knex.Config);
+const db = Knex(dbConfig);
 
 export default db;
