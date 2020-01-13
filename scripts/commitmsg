@@ -13,7 +13,7 @@ const fetchAndCacheGitmojis = async () => {
   try {
     const data = await fetch(GITMOJIS_URL).then(r => r.json());
     const emojis = data.gitmojis.reduce((list, gitmoji) => {
-      if (gitmoji && gitmoji.name) list.push(gitmoji.name.replace(/-/, '_'));
+      if (gitmoji && gitmoji.name) list.push(gitmoji.name.replace(/-/g, '_'));
 
       return list;
     }, []);
