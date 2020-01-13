@@ -40,6 +40,8 @@
     "@zeit/next-css": "^1.0.1",
     "bookshelf": "^1.0.1",
     "dotenv": "^8.2.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "jest-transform-stub": "^2.0.0",
     "knex": "^0.20.4",
     "next": "^9.1.5",
     "node-fetch": "^2.6.0",
