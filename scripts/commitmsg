@@ -4,6 +4,7 @@ const { readFileSync, mkdirSync, writeFileSync, existsSync } = require('fs');
 const { homedir } = require('os');
 const path = require('path');
 const fetch = require('node-fetch');
+const { unlinkSync } = require('fs');
 
 const GITMOJIS_URL = 'https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json';
 const CACHE_FOLDER_PATH = path.join(homedir(), '.gitmoji');
@@ -42,6 +43,14 @@ const getGitmojisFromCache = () => JSON.parse(readFileSync(CACHE_FILE_PATH));
 
   if (gitmojisList.includes(match[1])) {
     console.log('Valid commit message');
+    process.exit(0);
+  }
+
+  // invalidate cache and retry
+  unlinkSync(CACHE_FILE_PATH);
+  await fetchAndCacheGitmojis();
+  if (gitmojisList.includes(match[1])) {
+    console.log('Valid commit message. Cache has been cleared');
     process.exit(0);
   }
 
