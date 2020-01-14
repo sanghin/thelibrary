@@ -1,4 +1,4 @@
-import knexInstance from 'Server/database/connection'
+import knexInstance from '../server/database/connection';
 
 jest.mock('knex', () => ({
     clearHeaderData() {
