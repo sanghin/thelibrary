@@ -1,4 +1,4 @@
-import db from 'Server/database/db';
+import db from '../../server/database/db';
 
 const Search = async (request, response) => {
   const params: SearchParams = request.method === 'POST' ? JSON.parse(request.body) : request.query;
