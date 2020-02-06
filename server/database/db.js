@@ -21,6 +21,4 @@ const knexConfig = {
 };
 
 const db = Knex(knexConfig);
-
-exports.default = db;
-exports.dbConfig = knexConfig;
+module.exports = db;
