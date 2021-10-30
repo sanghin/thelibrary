@@ -1,16 +1,14 @@
-import { SyntheticEvent } from 'react';
+import React from 'react'
 
 type Props = {
-  className?: string;
-  options: Array<string>;
-  size?: number;
-  placeholder?: string;
-  onChange: (event: SyntheticEvent<HTMLSelectElement>) => void
-};
+  className?: string
+  options: Array<string>
+  size?: number
+  placeholder?: string
+  onChange: React.ChangeEventHandler<HTMLSelectElement>
+}
 
-export default ({
-  className, options, size = 1, placeholder, onChange,
-}: Props) => (
+const Dropdown = ({ className, options, size = 1, placeholder, onChange }: Props) => (
   <select size={size} className={className} onChange={onChange}>
     {placeholder ? (
       <option defaultValue={null} selected>
@@ -24,4 +22,6 @@ export default ({
       </option>
     ))}
   </select>
-);
+)
+
+export default Dropdown

@@ -1,5 +1,7 @@
-import { memo } from 'react';
+import React from 'react'
 
-import css from './styles.css';
+import css from './styles.css'
 
-export default memo(() => <div className={css.title}>Find your next build Exile!</div>);
+const Title = () => <div className={css.title}>Find your next build Exile!</div>
+
+export default Title

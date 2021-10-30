@@ -1,5 +1,7 @@
-import { memo } from 'react';
+import React from 'react'
 
-import css from './styles.css';
+import css from './styles.css'
 
-export default memo(() => <img className={css.logo} src='headhunter.png' alt='logo' />);
+const Logo = () => <img className={css.logo} src="headhunter.png" alt="logo" />
+
+export default Logo
