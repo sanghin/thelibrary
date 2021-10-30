@@ -1,13 +1,15 @@
-import { memo } from 'react';
+import React from 'react'
 
-import Title from './components/Title';
-import Import from './components/Import';
+import Title from './components/Title'
+import Import from './components/Import'
 
-import css from './styles.css';
+import css from './styles.css'
 
-export default memo(() => (
+const Header = () => (
   <div className={css.header}>
     <Title />
     <Import />
   </div>
-));
+)
+
+export default Header

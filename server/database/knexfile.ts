@@ -1,9 +1,9 @@
-const { config } = require('dotenv');
-const Knex = require('knex');
+import { config } from 'dotenv';
+import knex from 'knex';
 
 config({ path: `${process.env.PWD}/.env` });
 
-const knexConfig = {
+const db = knex({
   client: 'pg',
   connection: {
     host: process.env.POSTGRES_HOST,
@@ -12,13 +12,11 @@ const knexConfig = {
     database: process.env.POSTGRES_DB,
   },
   migrations: {
-    // This is missing from the TypeScript types currently.
     stub: 'migration.stub',
     extension: 'ts',
     tableName: 'migrations',
     directory: `${__dirname}/migrations`,
   },
-};
+});
 
-const db = Knex(knexConfig);
-module.exports = db;
+export default db;

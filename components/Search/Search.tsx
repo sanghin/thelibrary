@@ -1,31 +1,35 @@
-import { SyntheticEvent, useState } from 'react';
+import React, { SyntheticEvent, useState } from 'react'
 
-import Dropdown from '../Dropdown/Dropdown';
-import ascendancies from '../../utils/ascendancies';
-import skills from '../../utils/skills';
+import Dropdown from '#components/Dropdown/Dropdown'
+import ascendancies from '#utils/ascendancies'
+import skills from '#utils/skills'
 
-import css from './styles.css';
+import css from './styles.css'
 
-type SelectChangeEvent = SyntheticEvent<HTMLSelectElement>;
 type Props = {
-  onSearch: (SearchParams: SearchParams) => void,
+  onSearch: (SearchParams: SearchParams) => void
 }
 
-export default ({ onSearch }: Props) => {
-  const [searchParams, setSearchParams] = useState<SearchParams>([]);
+const Search = ({ onSearch }: Props) => {
+  const [searchParams, setSearchParams] = useState<SearchParams>([])
 
   function handleSubmit(event: SyntheticEvent<HTMLFormElement>) {
-    event.preventDefault();
-    return false;
+    event.preventDefault()
+    return false
   }
 
-  function handleAscendanciesChange(event: SelectChangeEvent) {
-    const updatedSearchParams = { ...searchParams, ascendancy: event.currentTarget.value };
-    setSearchParams(updatedSearchParams);
-    onSearch(updatedSearchParams);
+  function handleAscendanciesChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    const updatedSearchParams = {
+      ...searchParams,
+      ascendancy: event.currentTarget.value,
+    }
+    setSearchParams(updatedSearchParams)
+    onSearch(updatedSearchParams)
   }
 
-  function handleSkillChange(event: SelectChangeEvent) { onSearch({ key: 'skill', value: event.currentTarget.value }); }
+  function handleSkillChange(event: React.ChangeEvent<HTMLSelectElement>) {
+    onSearch({ key: 'skill', value: event.currentTarget.value })
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -34,5 +38,7 @@ export default ({ onSearch }: Props) => {
         <Dropdown onChange={handleSkillChange} options={skills} placeholder="Skill gem" />
       </div>
     </form>
-  );
-};
+  )
+}
+
+export default Search

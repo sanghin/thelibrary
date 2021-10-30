@@ -215,4 +215,4 @@ export default [
   'Zealotry',
   'Detonate Mines',
   'Portal',
-];
+]
