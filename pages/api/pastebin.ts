@@ -1,13 +1,15 @@
+import { NextApiRequest, NextApiResponse } from 'next'
+import fetch from 'node-fetch'
+import parser from 'xml2json'
+import { inflateSync } from 'zlib'
+
+// const Build = require('../../server/database/model/build')
 const regex = /^https:\/\/pastebin\.com\/(\w{8,}?)/
-const fetch = require('node-fetch')
-const parser = require('xml2json')
-const { inflateSync } = require('zlib')
-const Build = require('../../server/database/model/build')
 
 /**
  * Convert PasteBin content to JSON
  * Reverse pob encoding process:
- * https://github.com/Openarl/PathOfBuilding/blob/77ec6f3ffaf75d50ee58dc6ab1d8778a499b7628/Classes/ImportTab.lua#L141
+ * https://github.com/PathOfBuildingCommunity/PathOfBuilding/blob/0bbae520f87aa9d8c8e37c985ec152e9cc9d91be/src/Classes/ImportTab.lua#L168
  */
 const fromPastebin = async (pasteBinId) => {
   try {
@@ -25,14 +27,13 @@ const fromPastebin = async (pasteBinId) => {
 
     return parser.toJson(inflateBuffer.toString(), { object: true })
   } catch (err) {
-    // eslint-disable-next-line no-console
     console.error(err)
 
     return null
   }
 }
 
-export default async (request, response) => {
+export default async (request: NextApiRequest, response: NextApiResponse) => {
   const match = request.body.match(regex)
   const pasteBinId = match && match[1] ? match[1] : request.body
   const rawBuild = await fromPastebin(pasteBinId)
@@ -48,12 +49,11 @@ export default async (request, response) => {
     // eslint-disable-next-line no-console
     console.log(JSON.stringify(rawBuild, null, 4))
 
-    await new Build({
-      created_at: new Date().toUTCString(),
-      pob: rawBuild,
-    }).save()
+    // await new Build({
+    //   created_at: new Date().toUTCString(),
+    //   pob: rawBuild,
+    // }).save()
   } catch (e) {
-    // eslint-disable-next-line no-console
     console.error('Failed to save', e)
 
     return null

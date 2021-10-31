@@ -4,7 +4,7 @@ import Dropdown from '#components/Dropdown/Dropdown'
 import ascendancies from '#utils/ascendancies'
 import skills from '#utils/skills'
 
-import css from './styles.css'
+import css from './Search.module.css'
 
 type Props = {
   onSearch: (SearchParams: SearchParams) => void

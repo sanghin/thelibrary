@@ -25,7 +25,6 @@
     "lint:fix": "eslint . --fix --ext .ts,.tsx"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "dotenv": "^10.0.0",
     "knex": "^0.95.12",
     "next": "^12.0.5",

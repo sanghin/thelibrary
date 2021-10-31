@@ -1,8 +1,9 @@
-import knex from '../../server/database/db'
+import { NextApiRequest, NextApiResponse } from 'next'
+import { getKnex } from '#server/database/knex'
 
-const Search = async (request, response) => {
+const Search = async (request: NextApiRequest, response: NextApiResponse) => {
   const params: SearchParams = request.method === 'POST' ? JSON.parse(request.body) : request.query
-  const qb = knex('build')
+  const qb = getKnex()
 
   const keys = Object.keys(params)
   for (const param of keys) {
@@ -21,7 +22,6 @@ const Search = async (request, response) => {
       builds,
     })
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error(error)
 
     return response.status(500).end()

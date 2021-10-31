@@ -10,6 +10,7 @@ module.exports = {
     },
   },
   rules: {
+    'no-console': [2, { allow: ['error'] }],
     'prettier/prettier': 2,
     'import/imports-first': 2,
     'import/first': 2,
@@ -36,7 +37,7 @@ module.exports = {
       version: 'detect',
     },
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.js'],
     },
     'import/resolver': {
       node: {},

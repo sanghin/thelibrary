@@ -1,6 +1,6 @@
 import React, { KeyboardEvent, ChangeEvent, useState } from 'react'
 
-import css from './styles.css'
+import css from './styles.module.css'
 
 const Import = () => {
   const [value, setInputValue] = useState<string>('')

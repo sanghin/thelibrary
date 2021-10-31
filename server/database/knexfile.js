@@ -1,9 +1,8 @@
-import { config } from 'dotenv';
-import knex from 'knex';
+require('dotenv').config({
+  path: `${__dirname}/../../.env.local`
+})
 
-config({ path: `${process.env.PWD}/.env` });
-
-const db = knex({
+const knex = require('knex')({
   client: 'pg',
   connection: {
     host: process.env.POSTGRES_HOST,
@@ -14,9 +13,9 @@ const db = knex({
   migrations: {
     stub: 'migration.stub',
     extension: 'ts',
-    tableName: 'migrations',
+    tableName: 'knex_migrations',
     directory: `${__dirname}/migrations`,
   },
-});
+})
 
-export default db;
+module.exports = knex
