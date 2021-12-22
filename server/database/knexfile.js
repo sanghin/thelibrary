@@ -2,7 +2,7 @@ require('dotenv').config({
   path: `${__dirname}/../../.env.local`
 })
 
-const knex = require('knex')({
+module.exports = {
   client: 'pg',
   connection: {
     host: process.env.POSTGRES_HOST,
@@ -12,10 +12,6 @@ const knex = require('knex')({
   },
   migrations: {
     stub: 'migration.stub',
-    extension: 'ts',
-    tableName: 'knex_migrations',
     directory: `${__dirname}/migrations`,
   },
-})
-
-module.exports = knex
+}
