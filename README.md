@@ -1,26 +1,22 @@
 # Siosa
 
+Path Of Exile build library!
+
 ## Requirement
 
 - Docker
+- [nvm](https://github.com/nvm-sh/nvm)
 
 ## Install
 
-```
-docker-compose build
-docker-compose run --rm node yarn install
-docker-compose up -d
-```
+- Install required version of node (check engines in package.json) ( e.g `nvm isntall 16` or `nvm use 16` )
+- Install deps with `yarn install`
+- Start the database: `docker-compose up --build`
+- Migrate database: `yarn knex --knexfile server/database/knexfile.js migrate:latest`
+- Start the project: `yarn dev` or `yarn build && yarn start`
 
-## Migrations
+## FAQ
 
-```
-docker-compose run --rm node yarn knex migrate:latest
-```
+`Why PG and not MongoDB ?`
 
-## Lint
-
-```
-docker-compose run --rm node yarn lint
-docker-compose run --rm node yarn lint-fix
-```
+To test PG performance when dealing with JSON objects
