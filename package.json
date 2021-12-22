@@ -17,6 +17,9 @@
   "contributors": [
     "Luc Tribolet <luc.tribolet@gmail.com> (https://tribolet.fr)"
   ],
+  "engines": {
+    "node": ">= 16.9.0"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
