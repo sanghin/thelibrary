@@ -18,6 +18,7 @@ const fetchAndCacheGitmojis = async () => {
       return list
     }, [])
 
+    // eslint-disable-next-line no-console
     console.info('Saving gitmojis cache')
     if (!existsSync(CACHE_FOLDER_PATH)) {
       mkdirSync(CACHE_FOLDER_PATH)
@@ -41,6 +42,7 @@ async function main() {
   const match = input.match(/^:(\w{1,50}):/)
 
   if (gitmojisList.includes(match[1])) {
+    // eslint-disable-next-line no-console
     console.log('Valid commit message')
     process.exit(0)
   }

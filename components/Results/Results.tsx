@@ -1,6 +1,6 @@
 import React from 'react'
 
-import css from './Results.css'
+import css from './Results.module.css'
 
 type Props = {
   results: SearchResults

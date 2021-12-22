@@ -1,6 +1,6 @@
 const TABLE_NAME = 'build';
 
-exports.up = async function up(knex) {
+export async function up(knex) {
   return knex.schema.createTable(TABLE_NAME, (table) => {
     table.increments();
     table.jsonb('pob');
@@ -8,6 +8,6 @@ exports.up = async function up(knex) {
   });
 };
 
-exports.down = async function down(knex) {
+export async function down(knex) {
   return knex.schema.dropTable(TABLE_NAME);
 };
