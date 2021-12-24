@@ -1,11 +1,9 @@
 exports.up = async (knex) => {
   return knex.schema.createTable('build', (table) => {
-    table.increments();
-    table.jsonb('pob');
-    table.timestamps();
+    table.string('id').primary();
+    table.jsonb('pob').notNullable();
+    table.timestamps(true, true);
   });
 };
 
-exports.down = async (knex) => {
-  return knex.schema.dropTable('build');
-};
+exports.down = async (knex) => knex.schema.dropTableIfExists('build')

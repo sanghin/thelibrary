@@ -30,13 +30,12 @@
     "incremental": true
   },
   "include": [
-    "next-env.d.ts",
+    "*.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "siosa.d.ts",
-    "styles.d.ts"
+    "types/*.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
   ]
 }

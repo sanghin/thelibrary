@@ -19,6 +19,7 @@ type Ascendancies =
   | 'Inquisitor'
   | 'Hierophant'
   | 'Guardian'
+
 type Realm = 'PC'
 
 type Item = {
@@ -76,7 +77,7 @@ type BuildDetails = {
   MinionStat: Array<{ stat: string; value: string }>
 }
 
-interface Build {
+interface POBBuild {
   PathOfBuilding: {
     Build: BuildDetails
     Import: {

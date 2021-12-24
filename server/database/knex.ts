@@ -1,5 +1,5 @@
 import knex from 'knex'
-import config from './knexfile'
+import { config } from './knexfile'
 
 /**
  * Global is used here to ensure the connection

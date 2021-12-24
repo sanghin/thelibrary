@@ -1,3 +1,5 @@
-exports.up = async (knex) => {};
+import { Knex } from "knex"
 
-exports.down = async (knex) => {};
+export const up = async (knex: Knex) => {}
+
+export const down = async (knex: Knex) => {}
